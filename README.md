@@ -12,4 +12,6 @@ TODO
 
 4. Ability to pull JSONs from the web without an API. Most of the current commands get JSON files from various APIs. I want to construct my own JSON files, or figure out a way to do it without the API so I'm not reliant on others having a working API. (For example some commands got outdated because the APIs went down)
 
-5. Not necessarily a command, but for a game I play "Torn City", there's an API available, and I would like to pull data from that API to notify me of when certain things happen in game. See api.torn.com
+5. Add comments to explain what each command does. Pretty self explanatory
+
+6. Not necessarily a command, but for a game I play "Torn City", there's an API available, and I would like to pull data from that API to notify me of when certain things happen in game. See api.torn.com
