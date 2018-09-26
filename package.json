@@ -1,0 +1,14 @@
+{
+  "name": "danielbot",
+  "version": "1.0.0",
+  "description": "A discord bot Daniel is making in order to have complete control over the bot.",
+  "main": "bot.js",
+  "author": "Daniel Barnes",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "discord.js-music": "^2.1.0",
+    "snekfetch": "^4.0.4",
+    "unirest": "^0.5.1"
+  }
+}
