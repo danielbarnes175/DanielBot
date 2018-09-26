@@ -1,3 +1,12 @@
+/*
+ This command will return a list of users with a specific phrase in their name.
+ Usage is defined as ~findusers phrase
+ 
+ For example,
+ In a server with users @dave and @dave123, if someone were to type ~findusers dave
+ It would return both @dave and @dave123. If the user were to type ~findusers 123
+ It would only return @dave123
+*/	
 module.exports.run = async (bot, message, args) => {
 	let users = bot.users;
 

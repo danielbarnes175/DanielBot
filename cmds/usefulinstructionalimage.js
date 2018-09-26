@@ -2,6 +2,13 @@ const unirest = require('unirest');
 const api = 'https://hargrimm-wikihow-v1.p.mashape.com/images?count=2';
 const Discord = require("discord.js");
 
+/*
+ This command returns an out of context WikiHow image.
+
+ The command currently does not work because the API used does not return a valid url.
+
+ Usage is defined as ~usefulinstructionalimage
+*/
 module.exports.run = async (bot, message, args) => {
 	try {
 		unirest.get(api)

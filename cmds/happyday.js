@@ -7,6 +7,12 @@ const text2 = fs.readFileSync("./nounlist.txt").toString('utf-8');
 //text3 is the list of abstract nouns
 const text3 = fs.readFileSync("./abstractnounlist.txt").toString('utf-8');
 
+/*
+ This command generates a random phrase following the struture
+ "Happy" + adjective + noun + abstract noun + "Day!"
+
+ Usage is defined as ~happyday
+*/
 module.exports.run = async (bot, message, args) => {
 	//Generates a random phrase following the structure 
 	//"Happy" + adjective + noun + abstract noun + "Day!"

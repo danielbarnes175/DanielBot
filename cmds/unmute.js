@@ -1,5 +1,13 @@
 const fs = require("fs");
 
+/*
+ This command unmutes a user.
+
+ To unmute a user, they must be already muted, and the user must have MANAGE_MESSAGES and be
+ of a higher role than the user they are trying to unmute.
+
+ Usage is defined as ~unmute @user
+*/
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You do not have sufficient priviledges.");
 

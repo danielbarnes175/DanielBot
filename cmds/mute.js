@@ -1,5 +1,14 @@
 const fs = require("fs");
+/* 
+ This command is used to mute a user.
 
+ Usage is defined as ~mute @user or ~mute @user time
+ Time is an integer in seconds, and will mute the user for that specific amount of time.
+ 
+ To mute, the one using the command must have the manage messages function in his or her row,
+ and also be in a role of a higher rank than the user they are trying to mute.
+ If the user is already muted, the command will not re-mute them. 
+*/
 module.exports.run = async (bot, message, args) => {
 		if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("You do not have sufficient priviledges.");
 

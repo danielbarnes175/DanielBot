@@ -1,5 +1,9 @@
 const fs = require("fs");
 
+/*
+ This command returns a list of all commands currently available to use by the bot.
+ Usage is defined as ~help
+*/
 module.exports.run = async (bot, message, args) => {
 	message.channel.send("Here are the following commands: ");
 	message.channel.send("avatar: Get the avatar of a user with ~avatar @user");

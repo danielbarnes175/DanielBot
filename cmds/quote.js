@@ -1,9 +1,14 @@
 const unirest = require('unirest');
 const Discord = require("discord.js");
 
+/*
+ This command returns a random movie quote from the API used.
+
+ Usage is defined as ~quote
+*/
 module.exports.run = async (bot, message, args) => {
 
-		const api = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1';
+const api = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1';
 
 	try {
 		unirest.post(api)

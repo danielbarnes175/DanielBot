@@ -1,6 +1,11 @@
 const unirest = require('unirest');
 const Discord = require("discord.js");
 
+/*
+ This command defines a given word.
+ Usage is defined as ~define word
+ It will then return the top definition for word from UrbanDictionary.
+*/
 module.exports.run = async (bot, message, args) => {
 	if (args[0] == null) message.channel.send("Please provide a search term");
 
