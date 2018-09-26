@@ -5,9 +5,9 @@
 */
 module.exports.run = async (bot, message, args) => {
 
-	let numberOfPeople = args.length - 1;
+	let numberOfPeople = args.length;
 
-	let whichPerson = Math.floor(Math.random() * numberOfPeople + 1);
+	let whichPerson = Math.floor(Math.random() * numberOfPeople);
 
 	message.channel.send(args[whichPerson] + " is correct.")
 }
