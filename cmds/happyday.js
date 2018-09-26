@@ -1,11 +1,11 @@
 const discord = require("discord.js");
 const fs = require("fs");
 //text1 is the list of adjectives
-const text1 = fs.readFileSync("./adjectivelist.txt").toString('utf-8');
+const text1 = fs.readFileSync("./words/adjectivelist.txt").toString('utf-8');
 //text2 is the list of nouns
-const text2 = fs.readFileSync("./nounlist.txt").toString('utf-8');
+const text2 = fs.readFileSync("./words/nounlist.txt").toString('utf-8');
 //text3 is the list of abstract nouns
-const text3 = fs.readFileSync("./abstractnounlist.txt").toString('utf-8');
+const text3 = fs.readFileSync("./words/abstractnounlist.txt").toString('utf-8');
 
 /*
  This command generates a random phrase following the struture
