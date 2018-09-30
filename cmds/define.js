@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 		if (!body.list[0]) return message.channel.send("No results found.");
 
 			let embed = new Discord.RichEmbed()
-					.setAuthor(args.join(" ") + " definition")
+					.setTitle(args.join(" "))
 					.setDescription(body.list[0].definition);
 
 		message.channel.send({embed: embed}); 
