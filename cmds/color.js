@@ -17,9 +17,9 @@ module.exports.run = async (bot, message, args) => {
 
 	let colored = message.member;
 	if(colored.roles.has(role.id)) return message.channel.send("You're already that color!");
-	colored.removeRoles(colors);
+	await colored.removeRoles(colors);
 
-	await colored.addRole(role.id);
+	colored.addRole(role.id);
 	message.channel.send("You are now that color.");
 }
 
