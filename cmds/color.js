@@ -1,8 +1,10 @@
 /*
- This command logs in the console that the person running the bot is a moron.
- There will be no noticeable output for regular users using the command.
+ This command sets a user's name as a specific color assuming the role for that color
+ is already created in the server. Role must start with '#' to be a valid role.
 
- Usage is defined as ~moron
+ Usage is defined as ~color #blue
+ This sets the user's color as blue.
+ ~color #red would set the user's color as red.
 */
 module.exports.run = async (bot, message, args) => {
 	let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
