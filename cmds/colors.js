@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
 	if (colors.size < 1) return message.channel.send("There aren't any colors :(");
 
 	message.channel.send(colors.array().join(" "));
+	message.channel.send("You can set your color with \"~color #color\"");
 
 }
 

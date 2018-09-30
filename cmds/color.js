@@ -8,6 +8,7 @@
 */
 module.exports.run = async (bot, message, args) => {
 	let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
+	if (!args[0]) return message.channel.send("Please choose a color");
 
 	args[0] = args[0].charAt(0) + args[0].charAt(1).toUpperCase() + args[0].slice(2);
 
