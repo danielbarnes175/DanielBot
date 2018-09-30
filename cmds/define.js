@@ -8,8 +8,7 @@ const Discord = require("discord.js");
 */
 module.exports.run = async (bot, message, args) => {
 	if (args[0] == null) message.channel.send("Please provide a search term");
-
-		const api = 'https://mashape-community-urban-dictionary.p.mashape.com/define?term=' + args[0];
+		const api = 'https://mashape-community-urban-dictionary.p.mashape.com/define?term=' + args.join("+");
 
 	try {
 		unirest.get(api)
@@ -20,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
 		 //console.log(api);
 		
 			let embed = new Discord.RichEmbed()
-					.setAuthor(args[0] + " definition")
+					.setAuthor(args.join(" ") + " definition")
 					.setDescription(body.list[0].definition);
 
 		message.channel.send({embed: embed}); 
