@@ -17,7 +17,8 @@ module.exports.run = async (bot, message, args) => {
 .end(function (r) {
 			let body = r.body;
 		 //console.log(api);
-		
+		if (!body.list[0]) return message.channel.send("No results found.");
+
 			let embed = new Discord.RichEmbed()
 					.setAuthor(args.join(" ") + " definition")
 					.setDescription(body.list[0].definition);
