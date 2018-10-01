@@ -11,12 +11,14 @@ module.exports.run = async (bot, message, args) => {
 const api = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1';
 
 	try {
+		//Sets all of the parameters needed to make a request to the API.
 		unirest.post(api)
-.header("X-Mashape-Key", "aXEHlCvPUTmshWa6uVvVqMlFCu1wp1AWk3yjsnCCAiYXnN1KQH")
-.header("Content-Type", "application/x-www-form-urlencoded")
-.header("Accept", "application/json")
-.end(function (r) {
+		.header("X-Mashape-Key", "aXEHlCvPUTmshWa6uVvVqMlFCu1wp1AWk3yjsnCCAiYXnN1KQH")
+		.header("Content-Type", "application/x-www-form-urlencoded")
+		.header("Accept", "application/json")
+		.end(function (r) {
 
+		//Sends the first quote given from the api.
 		let body = r.body;
 		message.channel.send(body[0].quote); 
 

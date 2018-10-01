@@ -22,6 +22,7 @@ module.exports.run = async (bot, message, args) => {
 	//Create a new RichEmbed that contains all of the commands.
 	let embed = new Discord.RichEmbed()
 					.setTitle("Commands")
+					.setColor("FFFFFF")
 					.setDescription(jsfiles);
 
 	//Send the RichEmbed that contains all of the commands.

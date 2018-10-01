@@ -5,9 +5,14 @@
  of the one using the command.
 */
 module.exports.run = async (bot, message, args) => {
+	//Lets the user know the avatar is being generated because this may take a few seconds.
 	let msg = await message.channel.send("Generating avatar...");
+
+	//Sets who the avatar is being generated from. Checks first if there is a user, otherwise
+	//it gets the avatar of the person using the command.
 	let who = message.mentions.users.first() || message.author;
 
+	//Sends the image as a file in discord.
 	message.channel.send({files: [
 		{
 			attachment: who.displayAvatarURL,
@@ -15,6 +20,7 @@ module.exports.run = async (bot, message, args) => {
 		}
 	]})
 
+	//Deletes the "Generating avatar..." message.
 	msg.delete();
 }
 

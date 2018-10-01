@@ -4,11 +4,12 @@
  Usage is defined as ~whichoneisright @user1 @user2
 */
 module.exports.run = async (bot, message, args) => {
-
 	let numberOfPeople = args.length;
 
+	//Randomly decides which argument is "correct"
 	let whichPerson = Math.floor(Math.random() * numberOfPeople);
 
+	//Returns that whichever argument was selected is correct.
 	message.channel.send(args[whichPerson] + " is correct.")
 }
 
