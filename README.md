@@ -32,14 +32,14 @@ For questions relating to the project, feel free to email me at danielbarnes175@
 
    `git clone https://github.com/danielbarnes175/DanielBot.git`
 
-This will download the main files that contain all of the code. We will then need to download the dependencies.
+	This will download the main files that contain all of the code. We will then need to download the dependencies.
 4. Use the following command:
 
-   `npm install`
+       `npm install`
 
-Once that is complete use another command:
+	Once that is complete use another command:
 
-   `npm install -g nodemon`
+   	   `npm install -g nodemon`
 
 5. All of the dependencies should now be installed.
 6. Create a bot using the Discord Developer Portal. [Here is a guide on how to add a bot in the developer portal](https://discordpy.readthedocs.io/en/rewrite/discord.html)
@@ -50,8 +50,8 @@ Once that is complete use another command:
 8. In that file copy and paste the following code:
 
    `{
-	   "token": "",
-	   "prefix": ""
+	   "token": "",`
+	   `"prefix": ""
    }`
 
 9. Be sure to fill out the information in between the second set of quotations for each line.
@@ -61,8 +61,8 @@ The prefix will be whatever you want to be used before a command. For example, i
 Here is an example of how the botSettings.json file will look.
 
    `{
-	   "token": "DcxODE0MzQ4NjI5ODY4NTY1.DjqS5w.i55gMQ-ceDdBx-UQsUt1tsuv6Og",
-	   "prefix": "~"
+	   "token": "DcxODE0MzQ4NjI5ODY4NTY1.DjqS5w.i55gMQ-ceDdBx-UQsUt1tsuv6Og",`
+	   `"prefix": "~"
    }`
 
    *Note that using this example will **NOT** work. You must use the token from your bot settings. Do not share this token! If someone else manages to get a hold of your token, they will be able to run their own code as your bot! People can and will use this to completely mess up any servers that your bot is in. (Trust me, I learned from experience)*
