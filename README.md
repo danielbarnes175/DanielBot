@@ -49,10 +49,12 @@ For questions relating to the project, feel free to email me at danielbarnes175@
 
 8. In that file copy and paste the following code:
 
-   `{
-	   "token": "",`
-	   `"prefix": ""
-   }`
+```
+   {
+	   "token": "",
+	   "prefix": ""
+   }
+```
 
 9. Be sure to fill out the information in between the second set of quotations for each line.
 The token will be your Bot's token under "Bot" under the bot you created in step 6.
@@ -60,10 +62,12 @@ The prefix will be whatever you want to be used before a command. For example, i
 
 Here is an example of how the botSettings.json file will look.
 
-   `{
-	   "token": "DcxODE0MzQ4NjI5ODY4NTY1.DjqS5w.i55gMQ-ceDdBx-UQsUt1tsuv6Og",`
-	   `"prefix": "~"
-   }`
+```
+   {
+	   "token": "DcxODE0MzQ4NjI5ODY4NTY1.DjqS5w.i55gMQ-ceDdBx-UQsUt1tsuv6Og",
+	   "prefix": "~"
+   }
+ ```
 
    *Note that using this example will **NOT** work. You must use the token from your bot settings. Do not share this token! If someone else manages to get a hold of your token, they will be able to run their own code as your bot! People can and will use this to completely mess up any servers that your bot is in. (Trust me, I learned from experience)*
 
