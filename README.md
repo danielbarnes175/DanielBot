@@ -1,5 +1,5 @@
-DanielBot
-
+# DanielBot
+-------------------------------------------------------------------------------------------------------
 
 DanielBot is a project that created by Daniel Barnes. The bot is a bot for Discord and contains many different commands. The code is in JavaScript and uses NodeJS and the main dependency, DiscordJS.
 
@@ -7,37 +7,39 @@ The bot is hosted on AWS, so it will be online nearly 24/7. (The times it will b
 
 For questions relating to the project, feel free to email me at danielbarnes175@gmail.com
 
+-------------------------------------------------------------------------------------------------------
+
 # SETUP
 
 
-#### If you would like to add DanielBot to your server:
+## If you would like to add DanielBot to your server:
 
 [Add DanielBot to my server.](https://discordapp.com/oauth2/authorize?client_id=471814348629868565&permissions=8&scope=bot)
 
-#### If you would like to host your own bot using the code from DanielBot:
+## If you would like to host your own bot using the code from DanielBot:
 
-##### Prequisites:
+### Prequisites:
 
-	1. [NodeJS](https://nodejs.org/en/)
-	2. [Git](https://git-scm.com/downloads)
+1. [NodeJS](https://nodejs.org/en/)
+2. [Git](https://git-scm.com/downloads)
 	
-##### Setup:
+### Setup:
 
 1. Open up the command window, or wherever you will be using git.
 2. Navigate to the location that you would like to store the files for the bot.
 	(For Example: cd Documents)
 3. Use the following command:
 
-	`git clone https://github.com/danielbarnes175/DanielBot.git`
+   `git clone https://github.com/danielbarnes175/DanielBot.git`
 
 This will download the main files that contain all of the code. We will then need to download the dependencies.
 4. Use the following command:
 
-	`npm install`
+   `npm install`
 
 Once that is complete use another command:
 
-	`npm install -g nodemon`
+   `npm install -g nodemon`
 
 5. All of the dependencies should now be installed.
 6. Create a bot using the Discord Developer Portal. [Here is a guide on how to add a bot in the developer portal](https://discordpy.readthedocs.io/en/rewrite/discord.html)
@@ -47,23 +49,23 @@ Once that is complete use another command:
 
 8. In that file copy and paste the following code:
 
-			`{
-				"token": "",
-				"prefix": ""
-			}`
+   `{
+	   "token": "",
+	   "prefix": ""
+   }`
 
-9. Be sure to fille out the information in between the second set of quotations for each line.
+9. Be sure to fill out the information in between the second set of quotations for each line.
 The token will be your Bot's token under "Bot" under the bot you created in step 6.
 The prefix will be whatever you want to be used before a command. For example, if you add my default DanielBot to your server, it uses the prefix ~
 
 Here is an example of how the botSettings.json file will look.
 
-			`{
-				"token": "DcxODE0MzQ4NjI5ODY4NTY1.DjqS5w.i55gMQ-ceDdBx-UQsUt1tsuv6Og",
-				"prefix": "~"
-			}`
+   `{
+	   "token": "DcxODE0MzQ4NjI5ODY4NTY1.DjqS5w.i55gMQ-ceDdBx-UQsUt1tsuv6Og",
+	   "prefix": "~"
+   }`
 
-*Note that using this example will **NOT** work. You must use the token from your bot settings. Do not share this token! If someone else manages to get a hold of your token, they will be able to run their own code as your bot! People can and will use this to completely mess up any servers that your bot is in. (Trust me, I learned from experience)*
+   *Note that using this example will **NOT** work. You must use the token from your bot settings. Do not share this token! If someone else manages to get a hold of your token, they will be able to run their own code as your bot! People can and will use this to completely mess up any servers that your bot is in. (Trust me, I learned from experience)*
 
 10. After this, you can just run the start.bat file in the root directory and the bot will start running!
 
