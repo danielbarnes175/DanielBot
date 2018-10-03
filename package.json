@@ -8,6 +8,8 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "discord.js-music": "^2.1.0",
+    "nodemon": "^1.18.4",
+    "npm-install-all": "^1.1.21",
     "snekfetch": "^4.0.4",
     "unirest": "^0.5.1"
   }
