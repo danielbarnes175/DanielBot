@@ -1,5 +1,4 @@
 # DanielBot
--------------------------------------------------------------------------------------------------------
 
 DanielBot is a project that created by Daniel Barnes. The bot is a bot for Discord and contains many different commands. The code is in JavaScript and uses NodeJS and the main dependency, DiscordJS.
 
