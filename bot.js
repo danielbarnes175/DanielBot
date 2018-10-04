@@ -26,6 +26,10 @@ fs.readdir("./cmds/", (err, files) => {
 	});
 });
 
+bot.on('error', err => {
+	console.error(err);
+});
+
 bot.on("ready", async () => {
 	console.log('Bot is ready! ' + bot.user.username);
 
