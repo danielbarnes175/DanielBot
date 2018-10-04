@@ -16,7 +16,10 @@ module.exports.run = async (bot, message, args) => {
 		let body = r.body;
 
 		let embed = new Discord.RichEmbed()
-					.setImage(r.body.url);
+					.setImage(r.body.hdurl)
+					.setDescription(r.body.explanation)
+					.setColor("#c4daff")
+					.setTitle("An awesome picture from NASA!");
 
 		message.channel.send({embed: embed});
 	});
