@@ -26,11 +26,23 @@ fs.readdir("./cmds/", (err, files) => {
 	});
 });
 
+/*
+let servers = bot.guilds;
+console.log(servers); */
+
 bot.on('error', err => {
 	console.error(err);
 });
 
 bot.on("ready", async () => {
+	console.log(` `);
+	console.log(`Servers bot is connected to: `);
+
+	bot.guilds.forEach((f, i) => {
+	console.log(`${f} connected.`);
+	});
+
+	console.log(` `);
 	console.log('Bot is ready! ' + bot.user.username);
 
 	//Runs through a loop that checks if the mute time for people is up
