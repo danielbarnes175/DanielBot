@@ -14,5 +14,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "whichoneisright"
+	name: "whichoneisright",
+	description: "Given any number of parameters, decides which one is right",
+	usage: "~whichoneisright thing1 thing2 thing3 etc"
 }

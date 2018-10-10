@@ -30,5 +30,7 @@ const api = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&co
 }
 
 module.exports.help = {
-	name: "quote"
+	name: "quote",
+	description: "Returns a random movie quote.",
+	usage: "~quote"
 }

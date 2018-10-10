@@ -8,5 +8,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "torn"
+	name: "torn",
+	description: "Provides a link to the online text based MMORPG \"Torn City\"",
+	usage: "~torn"
 }

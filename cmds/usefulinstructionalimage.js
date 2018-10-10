@@ -34,5 +34,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "usefulinstructionalimage"
+	name: "usefulinstructionalimage",
+	description: "Returns an out of context WikiHow image",
+	usage: "~usefulinstructionalimage"
 }

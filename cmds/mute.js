@@ -59,5 +59,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "mute"
+	name: "mute",
+	description: "Mute a user, assuming that they are not already muted and you have sufficient priviledges",
+	usage: "~mute @user or ~mute @user howlong"
 }

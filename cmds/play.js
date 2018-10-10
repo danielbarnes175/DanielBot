@@ -16,5 +16,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "play"
+	name: "play",
+	description: "Plays a song in the voice channel you are currently in.",
+	usage: "~play url"
 }

@@ -9,5 +9,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "moron"
+	name: "moron",
+	description: "Call the person running the bot a moron. You won't see the message, but they will.",
+	usage: "~moron"
 }

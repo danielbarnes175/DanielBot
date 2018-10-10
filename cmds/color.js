@@ -35,5 +35,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "color"
+	name: "color",
+	description: "Set your Discord name color to a specific color. Use ~colors for a list of possible colors",
+	usage: "~color #red or ~color #blue etc"
 }

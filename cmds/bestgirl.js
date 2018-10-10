@@ -14,5 +14,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "bestgirl"
+	name: "bestgirl",
+	description: "Returns the best girl in the server",
+	usage: "~bestgirl"
 }

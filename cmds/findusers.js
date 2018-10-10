@@ -26,5 +26,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "findusers"
+	name: "findusers",
+	description: "Returns list of users with a specific phrase in their name that are in servers that also contain DanielBot.",
+	usage: "~findusers phrase"
 }

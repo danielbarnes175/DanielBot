@@ -16,5 +16,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "colors"
+	name: "colors",
+	description: "Returns a list of all possible colors a user can make their name by using ~color",
+	usage: "~colors"
 }

@@ -28,5 +28,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "fix"
+	name: "fix",
+	description: "Not a command to be used by anyone. Don't even try thinking about using this...",
+	usage: "don't"
 }

@@ -30,5 +30,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "nasa"
+	name: "nasa",
+	description: "Returns the nasa image/picture of the day.",
+	usage: "~nasa"
 }
