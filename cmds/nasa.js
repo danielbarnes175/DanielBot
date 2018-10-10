@@ -11,7 +11,7 @@ const Discord = require("discord.js");
 */
 module.exports.run = async (bot, message, args) => {
 
-	//Creates a RichEmbed using the image given from the url, the only element, of the api.
+	//Creates a RichEmbed using the image given from the url of the api.
 	snekfetch.get(api).then(r => {
 		let body = r.body;
 		let url = (r.body.hdurl || r.body.url);
