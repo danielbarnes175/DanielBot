@@ -18,6 +18,7 @@ If you would like to request a feature, please create a new issue. I don't have 
 [Add DanielBot to my server.](https://discordapp.com/oauth2/authorize?client_id=471814348629868565&permissions=8&scope=bot)
 
 ## If you would like to host your own bot using the code from DanielBot:
+**Disclaimer:** These instructions are for Windows. Mac and Linux instructions are coming soon^TM.
 
 ### Prequisites:
 
