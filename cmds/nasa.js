@@ -4,22 +4,24 @@ const api = "https://api.nasa.gov/planetary/apod?api_key=K1WteeV9rHt7GBY36xcHQlI
 const snekfetch = require("snekfetch");
 const Discord = require("discord.js");
 /*
- This command will grab the image of the day from Nasa's api and return it
+ This command will grab the image/video of the day from Nasa's api and return it
  in a RichEmbed.
 
- Usage is defined as ~nasapic
+ Usage is defined as ~nasa
 */
 module.exports.run = async (bot, message, args) => {
 
 	//Creates a RichEmbed using the image given from the url, the only element, of the api.
 	snekfetch.get(api).then(r => {
 		let body = r.body;
+		let url = (r.body.hdurl || r.body.url);
 
 		let embed = new Discord.RichEmbed()
-					.setImage(r.body.hdurl)
+					.setImage(url)
 					.setDescription(r.body.explanation)
 					.setColor("#c4daff")
-					.setTitle("An awesome picture from NASA!");
+					.setTitle("An awesome picture from NASA!")
+					.addField("Link: ", `${url}`);
 
 		message.channel.send({embed: embed});
 	});
@@ -28,5 +30,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "nasapic"
+	name: "nasa"
 }
