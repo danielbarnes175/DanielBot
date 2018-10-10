@@ -26,10 +26,6 @@ fs.readdir("./cmds/", (err, files) => {
 	});
 });
 
-/*
-let servers = bot.guilds;
-console.log(servers); */
-
 bot.on('error', err => {
 	console.error(err);
 });
