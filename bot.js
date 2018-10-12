@@ -32,7 +32,7 @@ bot.on('error', err => {
 
 bot.on("ready", async () => {
 	console.log(` `);
-	console.log(`Servers bot is connected to: `);
+	console.log(`Servers bot is connected to [${bot.guilds.size}]:`);
 
 	bot.guilds.forEach((f, i) => {
 	console.log(`${f} connected.`);
