@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 	//Joins all of the colors in the array into one string with a space inbetween each color.
 	//Sends this as a message. Sends a second message explaining how to use the ~color command.
 	message.channel.send(colors.array().join(" "));
-	message.channel.send("You can set your color with \"~color #color\"");
+	message.channel.send("You can set your color with \"~color #color\" or remove a color with \"~color none\"");
 
 }
 

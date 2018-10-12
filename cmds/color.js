@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 /*
  This command sets a user's name as a specific color assuming the role for that color
  is already created in the server. Role must start with '#' to be a valid role.
@@ -7,6 +8,19 @@
  ~color #red would set the user's color as red.
 */
 module.exports.run = async (bot, message, args) => {
+	//Remove color if they want no color.
+	if (args[0].toLowerCase() == "none") {
+		try {
+		let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
+		let colored = message.member;
+		await colored.removeRoles(colors);
+		return message.channel.send("I have removed your color or you didn't have a color to begin with.");
+	}
+		catch(e) {
+			return message.channel.send("Hey admins of the server, make sure the bot's role is above the colored roles! Otherwise, this won't work!");
+		}
+	}
+
 	//Gets a list of all possible color roles in the channel. To be a possible color role,
 	//the role must start with '#'
 	let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
