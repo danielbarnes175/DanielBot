@@ -10,9 +10,11 @@ const Discord = require("discord.js");
  Usage is defined as ~nasa
 */
 module.exports.run = async (bot, message, args) => {
-
+	let msg = await message.channel.send("Generating...");
+	
 	//Creates a RichEmbed using the image given from the url of the api.
 	snekfetch.get(api).then(r => {
+
 		let body = r.body;
 		let url = (r.body.hdurl || r.body.url);
 
@@ -25,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
 		message.channel.send({embed: embed});
 	});
-
+	msg.delete();
 
 }
 
