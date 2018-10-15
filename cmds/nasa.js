@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
 	let msg = await message.channel.send("Generating...");
 	
 	//Creates a RichEmbed using the image given from the url of the api.
-	snekfetch.get(api).then(r => {
+	await snekfetch.get(api).then(r => {
 
 		let body = r.body;
 		let url = (r.body.hdurl || r.body.url);
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 					.setTitle("An awesome picture from NASA!")
 					.addField("Link: ", `${url}`);
 
-		await message.channel.send({embed: embed});
+		message.channel.send({embed: embed});
 	});
 	msg.delete();
 
