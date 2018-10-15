@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 					.setTitle("An awesome picture from NASA!")
 					.addField("Link: ", `${url}`);
 
-		message.channel.send({embed: embed});
+		await message.channel.send({embed: embed});
 	});
 	msg.delete();
 
