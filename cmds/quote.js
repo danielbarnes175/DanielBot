@@ -7,7 +7,7 @@ const Discord = require("discord.js");
  Usage is defined as ~quote
 */
 module.exports.run = async (bot, message, args) => {
-
+let msg = await message.channel.send("Generating...");
 const api = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1';
 
 	try {
@@ -20,13 +20,13 @@ const api = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&co
 
 		//Sends the first quote given from the api.
 		let body = r.body;
-		message.channel.send(body[0].quote); 
+		message.channel.send(body[0].quote);
+		msg.delete();
 
 	}); 
  } catch (e) {
  	console.log(e.stack);
  }
-
 }
 
 module.exports.help = {
