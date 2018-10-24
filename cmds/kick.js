@@ -7,11 +7,11 @@ const discord = require('discord.js');
 */	
 module.exports.run = async (bot, message, args) => {
 	if (args.length <= 0) return message.channel.send("Please specify a user.");
+	
 	let user = message.mentions.members.first();
 	if (!user) return message.channel.send("Please specify a user!");
-	//if (message.channel.members.contains(user)) return ("This user is not in this server!");
-	let reason = "";
 
+	let reason = "";
 	for (var i = 1; i < args.length; i++) {
 		reason += (" ");
 		reason += args[i];
