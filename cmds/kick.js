@@ -6,6 +6,7 @@ const discord = require('discord.js');
  Usage is defined as ~kick @user or ~kick @user reason
 */	
 module.exports.run = async (bot, message, args) => {
+	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("You do not have sufficient priviledges.");
 	if (args.length <= 0) return message.channel.send("Please specify a user.");
 	
 	let user = message.mentions.members.first();
