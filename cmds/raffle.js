@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
 		});
 
-	return message.channel.send(`Lotto Started for${item}. Join with ~join`)
+	return message.channel.send(`Lotto started for${item}. Join with ~join`)
 }
 
 module.exports.help = {

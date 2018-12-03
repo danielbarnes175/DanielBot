@@ -9,10 +9,11 @@ module.exports.run = async (bot, message, args) => {
 	
 	if (!body.hasStarted) return message.channel.send("There is no lotto currently running!");
 	//if (message.author.id == body.starter) return message.channel.send("Sorry kid, you can't join your own lotto");
+	
 	for (var i = 0; i < body.entrants.length; i++) {
 		if (message.author.id == body.entrants[i].id) return message.channel.send("You are already entered.");
 	}
-	
+
 	let entrant = {"id":message.author.id, "name": message.author.username};
 	
 	body.entrants.push(entrant);

@@ -15,13 +15,11 @@ module.exports.run = async (bot, message, args) => {
 	let winnerNumber = Math.floor(Math.random() * body.entrants.length);
 	let anyWinner = true;
 	let winner = "";
+	let prize = body.item;
 	if (!entrants[winnerNumber]) anyWinner = false;
 	else {
 		winner = entrants[winnerNumber].id;
 	}
-
-	let lottoStarter = ""
-	let item = "";
 
 	body.hasStarted = false;
 	body.item = "";
@@ -35,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
 		});
 
 	if (!anyWinner) return message.channel.send("Ah geez, looks like nobody won...");
-	return message.channel.send(`The lotto is over, the winner is <@${winner}>`)
+	return message.channel.send(`The lotto is over, the winner is <@${winner}>. This user has won a brand new${prize}`)
 }
 
 module.exports.help = {
