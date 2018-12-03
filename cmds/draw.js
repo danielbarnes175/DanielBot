@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
 		});
 
 	if (!anyWinner) return message.channel.send("Ah geez, looks like nobody won...");
-	return message.channel.send(`The lotto is over, the winner is <@${winner}>. This user has won a brand new${prize}`)
+	return message.channel.send(`The lotto is over, the winner is <@${winner}>.\nThis user has won a brand new${prize}`)
 }
 
 module.exports.help = {

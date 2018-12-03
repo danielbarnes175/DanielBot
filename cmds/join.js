@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
 		});
 
-	return message.channel.send(`${message.author} has been added to the raffle for${body.item}.`)
+	return message.channel.send(`${message.author} has been added to the raffle for:\n${body.item}. \nJoin with ~join`)
 }
 
 module.exports.help = {
