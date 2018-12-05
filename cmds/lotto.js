@@ -8,25 +8,39 @@ const fs = require("fs");
 */
 module.exports.run = async (bot, message, args) => {
 	var body = JSON.parse(fs.readFileSync('./lotto.json', 'utf8'));
+	var server = message.guild.id;
 
-	if (body.hasStarted) return message.channel.send("There is already a lotto running!");
-
-	let lottoStarter = message.author.id
-	let item = "";
-	for (var i = 0; i < args.length; i++) {
-		item += " " + args[i];
+	for (var i = 0; i < body.servers.length; i++) {
+		if (body.servers[i].server == server) return message.channel.send("There is already a lotto running!");
 	}
 
-	body.hasStarted = true;
-	body.item = item;
-	body.starter = lottoStarter;
+	let lottoStarter = message.author.id;
+	let item = "";
+
+	for (var i = 0; i < args.length; i++) {
+		if (i != args.length-1) {
+			item += args[i] + " ";
+		}
+		else {
+			item += args[i];
+		}
+	}
+
+	let newServer = {
+		"server": server,
+		"item": item,
+		"starter": lottoStarter,
+		"entrants": []
+	}
+
+	body.servers.push(newServer);
 
 	fs.writeFile("./lotto.json", JSON.stringify(body, null, 2), err => {
 			if (err) throw err;
 
 		});
-
-	return message.channel.send(`Lotto started for${item}. Join with ~join`)
+	
+	return message.channel.send(`Lotto started for:\n${item}. \nJoin with ~join`);
 }
 
 module.exports.help = {
