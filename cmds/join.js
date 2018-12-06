@@ -6,6 +6,7 @@ const fs = require("fs");
 */
 module.exports.run = async (bot, message, args) => {
 	var body = JSON.parse(fs.readFileSync('./lotto.json', 'utf8'));
+	var item = "";
 	
 	for (var i = 0; i < body.servers.length; i++) {
 		if (body.servers[i].server == message.guild.id) {
@@ -15,6 +16,7 @@ module.exports.run = async (bot, message, args) => {
 			}
 			let entrant = {"id":message.author.id, "name": message.author.username};
 
+			item = body.servers[i].item;
 			body.servers[i].entrants.push(entrant);
 
 			fs.writeFile("./lotto.json", JSON.stringify(body, null, 2), err => {
@@ -22,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
 		});
 
-			return message.channel.send(`${message.author} has been added to the raffle for:\n${body.item}. \nJoin with ~join`)
+			return message.channel.send(`${message.author} has been added to the raffle for:\n${item}. \nJoin with ~join`)
 		}
 }
 
