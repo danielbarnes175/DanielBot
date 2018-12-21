@@ -34,9 +34,13 @@ bot.on("ready", async () => {
 	console.log(` `);
 	console.log(`Servers bot is connected to [${bot.guilds.size}]:`);
 
+
 	bot.guilds.forEach((f, i) => {
 	console.log(`${f} connected.`);
 	});
+
+	let botCreator = bot.users.get("129000992762101761");
+	botCreator.sendMessage(`Bot started on ${bot.guilds.array()} with name ${bot.user.username}`);
 
 	console.log(` `);
 	console.log('Bot is ready! ' + bot.user.username);
