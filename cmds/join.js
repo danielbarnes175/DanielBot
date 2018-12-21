@@ -1,4 +1,5 @@
 const fs = require("fs");
+const Discord = require("discord.js");
 
 
 /*
@@ -10,10 +11,24 @@ module.exports.run = async (bot, message, args) => {
 	
 	for (var i = 0; i < body.servers.length; i++) {
 		if (body.servers[i].server == message.guild.id) {
-			if (message.author.id == body.servers[i].starter) return message.channel.send("Sorry kid, you can't join your own lotto");
+			if (message.author.id == body.servers[i].starter) {
+				let embed = new Discord.RichEmbed()
+						.setTitle(`You can't enter your own lotto, `)
+						.setDescription(`${message.author}`)
+						.setColor("FFFF00");
+					return message.channel.send(embed);
+				}
+			
 			for (var j = 0; j < body.servers[i].entrants.length; j++) {
-				if (body.servers.entrants[i].id == message.author.id) return message.channel.send("You are already entered.");
+				if (body.servers[i].entrants[j].id == message.author.id) {
+					let embed = new Discord.RichEmbed()
+						.setTitle(`You are already entered, `)
+						.setDescription(`${message.author}`)
+						.setColor("FFFF00");
+					return message.channel.send(embed);
+				}
 			}
+
 			let entrant = {"id":message.author.id, "name": message.author.username};
 
 			item = body.servers[i].item;
@@ -24,11 +39,20 @@ module.exports.run = async (bot, message, args) => {
 
 		});
 
-			return message.channel.send(`${message.author} has been added to the raffle for:\n${item}. \nJoin with ~join`)
+			let embed = new Discord.RichEmbed()
+				.setTitle("Lotto!")
+				.setDescription(`${message.author} has been added to the raffle for:`)
+				.addField(`${item}`,"Join the lotto with ~join!")
+				.setColor("FFFF00");
+
+			return message.channel.send(embed);
 		}
 }
+			let embed = new Discord.RichEmbed()
+					.setTitle("There is no lotto currently running!")
+					.setColor("FFFF00");
 
-return message.channel.send("There is no lotto currently running!");
+			return message.channel.send(embed);
 	
 }
 

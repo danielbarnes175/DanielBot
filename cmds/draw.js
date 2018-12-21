@@ -1,4 +1,5 @@
 const fs = require("fs");
+const Discord = require("discord.js");
 
 
 /*
@@ -32,12 +33,31 @@ module.exports.run = async (bot, message, args) => {
 
 				});
 
-			if (!anyWinner) return message.channel.send("Ah geez, looks like nobody won...");
-			return message.channel.send(`The lotto is over, the winner is <@${winner}>.\nThis user has won a brand new${prize}`)
+			if (!anyWinner) {
+				let embed = new Discord.RichEmbed()
+					.setTitle("Nobody won!")
+					.setDescription("There were no entries, so there were no winners!")
+					.setColor("FFFF00")
+				return message.channel.send(embed);
+			} 
+
+			let embed = new Discord.RichEmbed()
+				.setTitle("Winner!")
+				.setDescription(`The lotto is over, the winner is <@${winner}>.\nThis user has won a brand new${prize}`)
+				.setColor("FFFF00");
+
+			return message.channel.send(embed);
 
 		}
 	}
 
+	let embed = new Discord.RichEmbed()
+			.setTitle("There's no lotto currently running!")
+			.setDescription(`There's no lotto running! If you want to draw one so bad, start your own!`)
+			.addField("How to start", "Start a lotto with ~lotto item")
+			.setColor("FFFF00");
+
+	return message.channel.send(embed);
 	return message.channel.send("There's no lotto running! If you want to draw one so bad, start your own!");
 
 }

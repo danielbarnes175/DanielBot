@@ -1,4 +1,5 @@
 const fs = require("fs");
+const Discord = require("discord.js");
 
 
 /*
@@ -40,7 +41,15 @@ module.exports.run = async (bot, message, args) => {
 
 		});
 	
-	return message.channel.send(`Lotto started for:\n${item}. \nJoin with ~join`);
+
+			let embed = new Discord.RichEmbed()
+					.setTitle("Lotto Started!")
+					.setDescription(`A lotto has been started!`)
+					.addField("Item", `${item}`)
+					.addField("How To Join", "Type ~join to join!")
+					.setColor("f21d4b");
+
+			return message.channel.send(embed);
 }
 
 module.exports.help = {
