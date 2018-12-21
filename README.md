@@ -32,7 +32,7 @@ If you would like to request a feature, please create a new issue. I don't have 
 	(For Example: cd Documents)
 3. Use the following command:
 
-   `git clone https://github.com/danielbarnes175/DanielBot.git`
+   ```git clone https://github.com/danielbarnes175/DanielBot.git```
 
 
 	This will download the main files that contain all of the code. We will then need to download the dependencies.
@@ -40,11 +40,11 @@ If you would like to request a feature, please create a new issue. I don't have 
    **Disclaimer:** If you want to make changes and save them to GitHub, then you should fork the repository, and then clone your forked version rather than use my files. Also, if you setup the bot so that you have to run it, you won't be getting updates as I push them so the bot won't be as functional. I recommend that you either add the bot I host to your server, or fork the repository so then I know which version you are running on.
 4. Use the following command:
 
-       `npm install`
+       ```npm install```
 
 	Once that is complete use another command:
 
-   	   `npm install -g nodemon`
+   	  ```npm install -g nodemon```
 
 5. All of the dependencies should now be installed.
 6. Create a bot using the Discord Developer Portal. [Here is a guide on how to add a bot in the developer portal](https://discordpy.readthedocs.io/en/rewrite/discord.html)
