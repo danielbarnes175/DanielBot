@@ -40,7 +40,9 @@ bot.on("ready", async () => {
 	});
 
 	let botCreator = bot.users.get("129000992762101761");
-	botCreator.send(`Bot started on ${bot.guilds.array()} with name ${bot.user.username}`);
+	if (botCreator) {
+		botCreator.send(`Bot started on ${bot.guilds.array()} with name ${bot.user.username}`);
+	}
 
 	console.log(` `);
 	console.log('Bot is ready! ' + bot.user.username);
