@@ -20,6 +20,8 @@ If you would like to request a feature, please create a new issue. I don't have 
 ## If you would like to host your own bot using the code from DanielBot:
 **Disclaimer:** These instructions are for Windows. Mac and Linux instructions are coming soon^TM.
 
+**Disclaimer 2:** I highly recommend that you use the bot I host rather than try to set it up on your own. When I add features, I test them on my bot already running, so there may be bugs I don't know about caused by events that only show up when you first add the bot to the server. Additionally, if you want the bot to stay up to date, if you host it on your own it would be your job to update the files. If you use the one that I am hosting, then the files are updated for you (I update them, and push them to production). One more thing is that if you fork the repository instead of cloning it, then if you need any assistance I will be able to see what version of the code you are on. This will allow for more efficient troubleshooting.
+
 ### Prequisites:
 
 1. [NodeJS](https://nodejs.org/en/)
@@ -36,7 +38,7 @@ If you would like to request a feature, please create a new issue. I don't have 
 
 	This will download the main files that contain all of the code. We will then need to download the dependencies.
 	   
-   **Disclaimer:** If you want to make changes and save them to GitHub, then you should fork the repository, and then clone your forked version rather than use my files. Also, if you setup the bot so that you have to run it, you won't be getting updates as I push them so the bot won't be as functional. I recommend that you either add the bot I host to your server, or fork the repository so then I know which version you are running on.
+   **Disclaimer:** If you want to make changes and save them to GitHub, then you should fork the repository, and then clone your forked version rather than use my files.
 4. Use the following command:
 
 	  ```npm install```
