@@ -43,7 +43,7 @@ bot.on("ready", async () => {
 	try {
 		botCreator.send(`Bot started on ${bot.guilds.array()} with name ${bot.user.username}`);
 	} catch (e) {
-		console.log(e.stack);
+		
 	}
 
 	console.log(` `);
