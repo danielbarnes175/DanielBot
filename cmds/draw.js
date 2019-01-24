@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
 
 			let embed = new Discord.RichEmbed()
 				.setTitle("Winner!")
-				.setDescription(`The lotto is over, the winner is <@${winner}>.\nThis user has won a brand new${prize}`)
+				.setDescription(`The lotto is over, the winner is <@${winner}>.\nThis user has won a brand new ${prize}`)
 				.setColor("FFFF00");
 
 			return message.channel.send(embed);
