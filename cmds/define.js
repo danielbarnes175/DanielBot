@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
 			//list[0] is the definition in the JSON file, so if it doesn't exist, there is
 			//no definition.
-			if (!body.list[0]) return message.channel.send("No results found.");
+			if (!body.list) return message.channel.send("No results found.");
 
 			//Creates a new RichEmbed containing the definition of the word.
 			let embed = new Discord.RichEmbed()
