@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
 	
 	let user = message.mentions.members.first();
 	if (!user) return message.channel.send("Please specify a user!");
+	if (user == message.author) return message.channel.send("Nice try buddy.");
 
 	let reason = "";
 	for (var i = 1; i < args.length; i++) {
