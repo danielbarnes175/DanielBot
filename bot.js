@@ -86,6 +86,12 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
 	
+	let guild = message.guild;
+	//If it's by a bot and not in the bot-spam channel on a specific server I have then delete the bot message.
+	if (guild && guild.id=='481982947197583360' && message.author.bot && message.channel.name != "bot-spam")
+		return message.delete();
+
+
 	//If it's another bot or if its in a dm, don't do anything.
 	if (message.author.bot) return;
 	if (message.channel.type === "dm") return;

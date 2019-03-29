@@ -44,7 +44,11 @@ module.exports.run = async (bot, message, args) => {
 	await colored.removeRoles(colors);
 
 	//Sets the user to that color and notifies them.
+	try {
 	colored.addRole(role.id);
+	} catch(e) {
+		return message.channel.send("Insufficient priviledges to add the role to the person :(");
+	}
 	message.channel.send("You are now that color.");
 }
 
