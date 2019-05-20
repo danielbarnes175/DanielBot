@@ -22,7 +22,6 @@ module.exports.run = async (bot, message, args) => {
 		if (keyPoints == 1) prompt += " + ";
 	}
 }
-	console.log(body);
 
 	while (genre == "") {
 		i =  Math.floor(Math.random() * body.genres.length);
