@@ -1,15 +1,3 @@
 {
-  "servers": [
-    {
-      "server": "471861999370895380",
-      "item": "test",
-      "starter": "129000992762101761",
-      "entrants": [
-        {
-          "id": "307597057718485003",
-          "name": "bballdaniel3"
-        }
-      ]
-    }
-  ]
+  "servers": []
 }
