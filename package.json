@@ -6,9 +6,9 @@
   "author": "Daniel Barnes",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^11.5.1",
     "discord.js-music": "^2.1.0",
-    "nodemon": "^1.18.4",
+    "nodemon": "^1.19.1",
     "snekfetch": "^4.0.4",
     "unirest": "^0.5.1"
   }
