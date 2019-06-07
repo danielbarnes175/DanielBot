@@ -1,8 +1,7 @@
 
-
-const api = "https://api.nasa.gov/planetary/apod?api_key=K1WteeV9rHt7GBY36xcHQlIF4LFUSyxLDJMQ9lnE";
-const snekfetch = require("snekfetch");
-const Discord = require("discord.js");
+const api = 'https://api.nasa.gov/planetary/apod?api_key=K1WteeV9rHt7GBY36xcHQlIF4LFUSyxLDJMQ9lnE'
+const snekfetch = require('snekfetch')
+const Discord = require('discord.js')
 /*
  This command will grab the image/video of the day from Nasa's api and return it
  in a RichEmbed.
@@ -10,29 +9,27 @@ const Discord = require("discord.js");
  Usage is defined as ~nasa
 */
 module.exports.run = async (bot, message, args) => {
-	let msg = await message.channel.send("Generating...");
-	
-	//Creates a RichEmbed using the image given from the url of the api.
-	await snekfetch.get(api).then(r => {
+  let msg = await message.channel.send('Generating...')
 
-		let body = r.body;
-		let url = (r.body.hdurl || r.body.url);
+  // Creates a RichEmbed using the image given from the url of the api.
+  await snekfetch.get(api).then(r => {
+    let body = r.body
+    let url = (r.body.hdurl || r.body.url)
 
-		let embed = new Discord.RichEmbed()
-					.setImage(url)
-					.setDescription(r.body.explanation)
-					.setColor("#c4daff")
-					.setTitle("An awesome picture from NASA!")
-					.addField("Link: ", `${url}`);
+    let embed = new Discord.RichEmbed()
+      .setImage(url)
+      .setDescription(r.body.explanation)
+      .setColor('#c4daff')
+      .setTitle('An awesome picture from NASA!')
+      .addField('Link: ', `${url}`)
 
-		message.channel.send({embed: embed});
-	});
-	msg.delete();
-
+    message.channel.send({ embed: embed })
+  })
+  msg.delete()
 }
 
 module.exports.help = {
-	name: "nasa",
-	description: "Returns the nasa video/picture of the day.",
-	usage: "~nasa"
+  name: 'nasa',
+  description: 'Returns the nasa video/picture of the day.',
+  usage: '~nasa'
 }

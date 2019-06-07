@@ -5,27 +5,27 @@
  of the one using the command.
 */
 module.exports.run = async (bot, message, args) => {
-	//Lets the user know the avatar is being generated because this may take a few seconds.
-	let msg = await message.channel.send("Generating avatar...");
+  // Lets the user know the avatar is being generated because this may take a few seconds.
+  let msg = await message.channel.send('Generating avatar...')
 
-	//Sets who the avatar is being generated from. Checks first if there is a user, otherwise
-	//it gets the avatar of the person using the command.
-	let who = message.mentions.users.first() || message.author;
+  // Sets who the avatar is being generated from. Checks first if there is a user, otherwise
+  // it gets the avatar of the person using the command.
+  let who = message.mentions.users.first() || message.author
 
-	//Sends the image as a file in discord.
-	message.channel.send({files: [
-		{
-			attachment: who.displayAvatarURL,
-			name: "avatar.png"
-		}
-	]})
+  // Sends the image as a file in discord.
+  message.channel.send({ files: [
+    {
+      attachment: who.displayAvatarURL,
+      name: 'avatar.png'
+    }
+  ] })
 
-	//Deletes the "Generating avatar..." message.
-	msg.delete();
+  // Deletes the "Generating avatar..." message.
+  msg.delete()
 }
 
 module.exports.help = {
-	name: "avatar",
-	description: "Returns avatar of a user",
-	usage: "~avatar or ~avatar @user"
+  name: 'avatar',
+  description: 'Returns avatar of a user',
+  usage: '~avatar or ~avatar @user'
 }
