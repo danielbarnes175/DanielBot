@@ -4,7 +4,7 @@
 */
 module.exports.run = async (bot, message, args) => {
   // Gets an array of all the members in the server.
-  let members = Array.from(message.member.guild.members)
+  let members = Array.from(message.guild.members)
 
   // Randomly generates an integer from 0-number of members in the server.
   var who = Math.floor(Math.random() * members.length)
