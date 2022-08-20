@@ -14,6 +14,8 @@ module.exports.run = async (bot, message, args) => {
     if (body.servers[i].server == server) return message.channel.send('There is already a lotto running!')
   }
 
+  if (args.length === 0) return message.channel.send('Please provide what you are lotto-ing, i.e. ~lotto 1 frog')
+
   let lottoStarter = message.author.id
   let item = ''
 
